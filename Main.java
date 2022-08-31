@@ -16,9 +16,54 @@ public class Main {
 		
 		
 		//RoomAllotment.bestFit(room_size, room_size.length, course_cap, course_cap.length);
+		int a[] = new int[time.length];
+		for(int i = 0; i < time.length; i++)
+		{
+			a[i] = 0;
+		}
+		int time_allot[][] = new int[preferences.length][preferences.length];
+		for(int i = 0; i < preferences.length; i++)
+		{
+			for(int j = 0; j < preferences.length; j++)
+			{
+				time_allot[i][j] = 0;
+			}
+		}
 		RoomAllotment obj = new RoomAllotment();
     	int pos[] = obj.bestFit(room_size, room_size.length, course_cap, course_cap.length);
-		
+		for(int i = 0; i < preferences.length; i++)
+		{
+			for(int j = 0; j < preferences.length; j++)
+			{
+				for(int k = 0; k < time.length; k++)
+				{
+					if(preferences[i][j] == time[k])
+					{
+						if(a[k] != 1)
+						{
+							a[k] = 1;
+							time_allot[i][j] = 1;
+							break;
+						}
+					}
+				}
+				if(time_allot[i][j] == 1)
+				{
+					break;
+				}
+			}
+		}
+		// for(int i = 0; i < preferences.length; i++)
+		// {
+		// 	for(int j = 0; j < preferences.length; j++)
+		// 	{
+		// 		System.out.println(time_allot[i][j]);
+		// 	}
+		// }
+		for(int i = 0; i < time.length; i++)
+		{
+			System.out.println(a[i]);
+		}
 	}
 
 }
