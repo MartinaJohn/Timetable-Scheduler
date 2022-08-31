@@ -58,7 +58,7 @@ public class RoomAllotment {
 	else
 	System.out.print("Not Allocated");
 	System.out.println();
-	}
+	}//try
 }
         }
   
