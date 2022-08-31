@@ -46,7 +46,7 @@ public class RoomAllotment {
 	// Reduce available memory in this block.
 	blockSize[bestIdx] -= processSize[i];
 	flag[bestIdx]=1;
-	
+	// 
 	}
 	}
 
