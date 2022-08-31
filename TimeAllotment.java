@@ -1,4 +1,7 @@
 import java.util.*;
-public class TimeAllotment {
-	
+public class TimeAllotment 
+{
+	// RoomAllotment obj = new RoomAllotment();
+    // int pos[] = obj.bestFit();
+
 }

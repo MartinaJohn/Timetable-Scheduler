@@ -6,7 +6,7 @@ public class RoomAllotment
 	public static ArrayList<ArrayList<String>> alloted_rooms = new ArrayList<ArrayList<String>>();
 	// bestfit algo code in java
 
-	public static void bestFit(int part_size[], int part, int pro_size[], int pro) 
+	public int[] bestFit(int part_size[], int part, int pro_size[], int pro) 
 	{
 		// // Stores block id of the block allocated to a
 		// // process
@@ -112,10 +112,13 @@ public class RoomAllotment
         {
             System.out.print(" " + (i+1) + "\t\t" + pro_size[i] + "\t\t");
             if (pos[i] != -1)
-                System.out.print((pos[i]) + "\t\t" + part_size[pos[i]] + "\t\t" + frag_size[i]);
+                System.out.print((pos[i] + 1) + "\t\t" + part_size[pos[i]] + "\t\t" + frag_size[i]);
             else
                 System.out.print("Not Allocated" + "\t" + "Not Alloted" + "\t" + "Not Alloted");
             System.out.println();
         }
+
+		return pos;
+
 	}
 }
