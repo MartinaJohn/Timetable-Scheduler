@@ -23,6 +23,7 @@ public class Main {
 				time_allot[i][j] = 0;
 			}
 		}
+		
 		RoomAllotment obj = new RoomAllotment();
 		int pos[] = obj.bestFit(room_size, room_size.length, course_cap, course_cap.length);
 		for (int i = 0; i < preferences.length; i++) {
